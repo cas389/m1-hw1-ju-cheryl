@@ -1,6 +1,6 @@
 /*===========================
 
-Universal Styling
+Reset Rule
 
 ===========================*/
 
@@ -11,9 +11,124 @@ Universal Styling
 	box-sizing: border-box;
 }
 
+/*===========================
+
+Container
+
+===========================*/
 .container {
   margin: 0 auto;
-  max-width: 90%;
+}
+
+/*===========================
+
+Header & Navigation Styling
+
+===========================*/
+header {
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: relative;
+  width: 100%;
+  z-index: 9999;
+  background-color: #1a1a1d;
+}
+h1 {
+  max-width: 20rem;
+  display: block;
+  float: left;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  color: #c3073f;
+}
+nav {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+header li a {
+  display: block;
+  color: #c3073f;
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px dotted #ddd;
+  text-align: center;
+  background-color: #1a1a1d;
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: .5rem;
+}
+header li a:hover,
+.menu-btn:hover {
+  background-color: #4e4e50;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1rem;
+}
+nav {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 10px;
+  position: relative;
+  user-select: none;
+}
+.navicon {
+  background: #c3073f;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 1.5rem;
+}
+.navicon:before,
+.navicon:after {
+  background: #c3073f;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.navicon:before {
+  top: 5px;
+}
+.navicon:after {
+  top: -5px;
+}
+.menu-btn {
+  display: none;
+}
+.menu-btn:checked ~ nav {
+  max-height: 340px;
+}
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+/*===========================
+
+Main Section
+
+===========================*/
+main {
+  background: blue;
 }
 
 
@@ -24,7 +139,41 @@ Responsive Web Coding - 768px by 1024px (Tablet)
 
 ===========================*/
 @media screen and (min-width: 768px) {
+  /* Header & Navigation */
+  header{
+    clear: none;
+    float: right;
+  }
+  header li {
+    float: left;
+  }
+  nav li a {
+    color: #c3073f;
+    border-bottom: none;
+    border-right: 1px solid #4e4e50;
+		height: 3rem;
+    letter-spacing: 0rem;
+    margin-top: 2rem;
+  }
+  nav li a:hover {
+    letter-spacing: 0rem;
+  }
+  nav {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  header .menu-icon {
+    display: none;
+    clear: none;
+    float: right;
+  }
+  nav ul {
+    list-style: none;
+  }
+  main {
 
+  }
 }
 
 /*===========================
