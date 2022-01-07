@@ -1,0 +1,45 @@
+/*===========================
+
+Universal Styling
+
+===========================*/
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+
+
+/*===========================
+
+Responsive Web Coding - 768px by 1024px (Tablet)
+
+===========================*/
+@media screen and (min-width: 768px) {
+
+}
+
+/*===========================
+
+Responsive Web Coding - 1366px by 768px (Laptop)
+
+===========================*/
+@media screen and (min-width: 1366px) {
+}
+
+
+/*===========================
+
+Responsive Web Coding - 1920px by 1024 px (Desktop)
+
+===========================*/
+@media screen and (min-width: 1500px) {
+}
