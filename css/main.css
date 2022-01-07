@@ -128,10 +128,24 @@ Main Section
 
 ===========================*/
 main {
-  background: blue;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
 }
 
+/*===========================
 
+Footer
+
+===========================*/
+
+footer {
+  background-color: #950740;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
 
 /*===========================
 
@@ -172,7 +186,10 @@ Responsive Web Coding - 768px by 1024px (Tablet)
     list-style: none;
   }
   main {
-
+    clear: none;
+  }
+  h2 {
+    padding-top: 6rem;
   }
 }
 
